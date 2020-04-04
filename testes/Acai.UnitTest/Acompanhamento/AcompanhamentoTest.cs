@@ -4,10 +4,12 @@ using System.Text;
 using Xunit;
 using Acai.Domain.Acompanhamento;
 using FluentAssertions;
+using Acai.Domain.Produto;
 namespace Acai.UnitTest.Acompanhamento
 {
     public class AcompanhamentoTest
     {
+        
 
         [Fact]
         public void CriarAcompanhamentoComSucesso()
