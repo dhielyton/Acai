@@ -33,7 +33,7 @@ namespace Acai.Domain.Tamanho
 
         public string GetDescricao()
         {
-            return $"{Descricao} {Produto.GetDescricao()}";
+            return $"{Produto.GetDescricao()} {Descricao}";
         }
 
         public int GetMinutosPreparo()
