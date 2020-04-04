@@ -1,0 +1,8 @@
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Domain\bin\Debug\netcoreapp2.2\Acai.Domain.deps.json
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Domain\bin\Debug\netcoreapp2.2\Acai.Domain.dll
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Domain\bin\Debug\netcoreapp2.2\Acai.Domain.pdb
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Domain\obj\Debug\netcoreapp2.2\Acai.Domain.csprojAssemblyReference.cache
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Domain\obj\Debug\netcoreapp2.2\Acai.Domain.AssemblyInfoInputs.cache
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Domain\obj\Debug\netcoreapp2.2\Acai.Domain.AssemblyInfo.cs
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Domain\obj\Debug\netcoreapp2.2\Acai.Domain.dll
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Domain\obj\Debug\netcoreapp2.2\Acai.Domain.pdb

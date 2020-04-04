@@ -1,0 +1,16 @@
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\Acai.UnitTest.deps.json
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\Acai.UnitTest.runtimeconfig.json
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\Acai.UnitTest.runtimeconfig.dev.json
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\Acai.UnitTest.dll
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\obj\Debug\netcoreapp2.2\Acai.UnitTest.csprojAssemblyReference.cache
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\obj\Debug\netcoreapp2.2\Acai.UnitTest.AssemblyInfoInputs.cache
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\obj\Debug\netcoreapp2.2\Acai.UnitTest.AssemblyInfo.cs
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\Acai.UnitTest.pdb
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\Acai.Domain.dll
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\bin\Debug\netcoreapp2.2\Acai.Domain.pdb
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\obj\Debug\netcoreapp2.2\Acai.UnitTest.csproj.CopyComplete
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\obj\Debug\netcoreapp2.2\Acai.UnitTest.dll
+C:\Users\Dhielyton\source\repos\Acai\testes\Acai.UnitTest\obj\Debug\netcoreapp2.2\Acai.UnitTest.pdb
