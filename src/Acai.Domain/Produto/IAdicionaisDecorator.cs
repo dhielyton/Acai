@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Acai.Domain.Produto
 {
-    public interface IProduto
+    public interface IAdicionaisDecorator: IProductComponente
     {
+
     }
 }

@@ -5,10 +5,10 @@ using System.Text;
 using Acai.Domain.Produto;
 namespace Acai.Domain.Tamanho
 {
-    public class Tamanho : Entity, IPreco, ITempoPreparo
+    public class Tamanho : Entity, IPreco, ITempoPreparo, IAdicionaisDecorator
     {
 
-        public Tamanho(Produto.Produto produto, string descricao, decimal preco, int minutosPreparo)
+        public Tamanho(IProductComponente produto, string descricao, decimal preco, int minutosPreparo)
         {
             if (produto == null)
                 throw new ArgumentNullException("O produto não pode ser nulo");
@@ -20,15 +20,30 @@ namespace Acai.Domain.Tamanho
             Preco = preco;
             MinutosPreparo = minutosPreparo;
         }
-        public Produto.Produto Produto { get; set; }
+        public IProductComponente Produto { get; set; }
         public int ProdutoId { get; set; }
         public string Descricao { get; set; }
         public decimal Preco { get; set; }
         public int MinutosPreparo { get; set; }
 
-        public static Tamanho Create(Produto.Produto produto, string descricao, decimal preco, int minutos)
+        public static Tamanho Create(IProductComponente produto, string descricao, decimal preco, int minutos)
         {
             return new Tamanho(produto, descricao, preco, minutos);
+        }
+
+        public string GetDescricao()
+        {
+            return $"{Descricao} {Produto.GetDescricao()}";
+        }
+
+        public int GetMinutosPreparo()
+        {
+            return MinutosPreparo + Produto.GetMinutosPreparo();
+        }
+
+        public decimal GetPreco()
+        {
+            return Preco + Produto.GetPreco();
         }
     }
 }

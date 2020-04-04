@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Acai.Domain.Produto
 {
-    public class Produto : Entity
+    public class Produto : Entity, IProductComponente
     {
         public Produto(string descricao)
         {
@@ -20,6 +20,21 @@ namespace Acai.Domain.Produto
         public static Produto Create(string descricao)
         {
             return new Produto(descricao);
+        }
+
+        public string GetDescricao()
+        {
+            return Descricao;
+        }
+
+        public int GetMinutosPreparo()
+        {
+            return 0;
+        }
+
+        public decimal GetPreco()
+        {
+            return 0.00M;
         }
     }
 }

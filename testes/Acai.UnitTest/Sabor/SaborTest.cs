@@ -21,8 +21,9 @@ namespace Acai.UnitTest.Sabor
         {
             var sabor = Domain.Sabor.Sabor.Create(produto, "Morango");
             sabor.Should().NotBeNull();
-            sabor.Descricao.Should().NotBeNullOrEmpty();
-            sabor.MinutosPreparo.Should().Be(0);
+            sabor.GetDescricao().Should().NotBeNullOrEmpty();
+            sabor.GetDescricao().Should().Be("Açai Morango");
+            sabor.GetMinutosPreparo().Should().Be(0);
         }
 
         [Fact]
@@ -31,8 +32,9 @@ namespace Acai.UnitTest.Sabor
             var minutos = 5;
             var sabor = Domain.Sabor.Sabor.Create(produto,"Kwi", minutos);
             sabor.Should().NotBeNull();
-            sabor.Descricao.Should().NotBeNullOrEmpty();
-            sabor.MinutosPreparo.Should().Be(minutos);
+            sabor.GetDescricao().Should().NotBeNullOrEmpty();
+            sabor.GetDescricao().Should().Be("Açai Kwi");
+            sabor.GetMinutosPreparo().Should().Be(minutos);
         }
     }
 }
