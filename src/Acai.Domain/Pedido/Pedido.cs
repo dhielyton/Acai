@@ -2,35 +2,37 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Acai.Domain.Produto;
 
 namespace Acai.Domain.Pedido
 {
     public class Pedido : Entity, ITempoPreparo
     {
+        public Pedido()
+        {
+
+        }
         public DateTime Data { get; set; }
         public ICollection<ItemPedido> ItemPedidos { get; private set; }
         public decimal ValorTotal { get; set; }
         public int MinutosPreparo { get;  set; }
 
-        public void AddItem(ItemPedido item)
+        public void AddItem(IProductComponente produto)
         {
             ItemPedidos = ItemPedidos ?? new List<ItemPedido>();
+            var item = new ItemPedido { Produto = produto };
             ItemPedidos.Add(item);
-            AddMinutosPreparo(item as ITempoPreparo);
+            MinutosPreparo = produto.GetMinutosPreparo();
+            ValorTotal += produto.GetPreco();
 
         }
 
-        private void AddMinutosPreparo(ITempoPreparo item)
+        public void Processar()
         {
-            if (item != null)
-                MinutosPreparo += item.MinutosPreparo;
+            Data = DateTime.Now;
         }
 
-        private void RemoveMinutosPreparo(ITempoPreparo item)
-        {
-            if (item != null)
-                MinutosPreparo -= item.MinutosPreparo;
-        }
+      
 
 
     }

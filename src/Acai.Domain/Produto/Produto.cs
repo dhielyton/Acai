@@ -14,6 +14,7 @@ namespace Acai.Domain.Produto
 
             Descricao = descricao;
         }
+       
 
         public string Descricao { get; set; }
 
@@ -36,5 +37,7 @@ namespace Acai.Domain.Produto
         {
             return 0.00M;
         }
+
+       
     }
 }
