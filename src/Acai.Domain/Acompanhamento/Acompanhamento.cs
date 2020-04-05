@@ -7,18 +7,27 @@ namespace Acai.Domain.Acompanhamento
 {
     public class Acompanhamento : Produto.Produto, IPreco, ITempoPreparo
     {
-        public Acompanhamento(string descricao, decimal preco , int minutosPreparo = 0) : base(descricao)
+        public Acompanhamento(string descricao, decimal preco, int minutosPreparo = 0) : base(descricao)
         {
             Preco = preco;
             MinutosPreparo = minutosPreparo;
         }
 
         public decimal Preco { get; set; }
-        public int MinutosPreparo { get ; set ; }
+        public int MinutosPreparo { get; set; }
 
         public static Acompanhamento Create(string descricao, decimal preco = 0.00M, int minutosPreparo = 0)
         {
             return new Acompanhamento(descricao, preco, minutosPreparo);
+        }
+        public override int GetMinutosPreparo()
+        {
+            return MinutosPreparo;
+        }
+
+        public override decimal GetPreco()
+        {
+            return Preco;
         }
     }
 }

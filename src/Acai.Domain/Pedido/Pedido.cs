@@ -22,7 +22,7 @@ namespace Acai.Domain.Pedido
             ItemPedidos = ItemPedidos ?? new List<ItemPedido>();
             var item = new ItemPedido { Produto = produto };
             ItemPedidos.Add(item);
-            MinutosPreparo = produto.GetMinutosPreparo();
+            MinutosPreparo += produto.GetMinutosPreparo();
             ValorTotal += produto.GetPreco();
 
         }

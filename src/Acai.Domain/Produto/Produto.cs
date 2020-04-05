@@ -23,17 +23,17 @@ namespace Acai.Domain.Produto
             return new Produto(descricao);
         }
 
-        public string GetDescricao()
+        public virtual string GetDescricao()
         {
             return Descricao;
         }
 
-        public int GetMinutosPreparo()
+        public virtual int GetMinutosPreparo()
         {
             return 0;
         }
 
-        public decimal GetPreco()
+        public virtual decimal GetPreco()
         {
             return 0.00M;
         }
