@@ -18,7 +18,6 @@ namespace Acai.Domain.Sabor
         }
 
         public IProductComponente Produto { get; set; }
-        public int MyProperty { get; set; }
         public int ProdutoId { get; set; }
         public string Descricao { get; set; }
         public int MinutosPreparo { get; set; }

@@ -11,7 +11,12 @@ namespace Acai.Infrastructure.EntityConfiguration
     {
         public void Configure(EntityTypeBuilder<Produto> builder)
         {
-          
+            builder.ToTable("produto");
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).HasColumnName("id_produto");
+            builder.Property(x => x.Descricao).HasColumnName("descricao");
+            
+            
         }
     }
 }
