@@ -1,8 +1,24 @@
 version: '3.4'
 
 services:
+   sql.data:
+    container_name: sql.data
+    image: mcr.microsoft.com/mssql/server:2017-CU19-ubuntu-16.04
+    volumes:
+      - .\sql.data:/var/opt/mssqlhost
+    environment:
+      - SA_PASSWORD=1qaz@2wsx!
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"    # Important: In a production environment your should remove the external port
+
   acai.api:
     image: ${DOCKER_REGISTRY-}acaiapi
     build:
       context: .
       dockerfile: Acai.API/Dockerfile
+    links:
+      sql.data
+    depends_on:
+      sql.data

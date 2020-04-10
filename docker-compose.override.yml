@@ -4,6 +4,7 @@ services:
   acai.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionString=Server=sql.data;Database=acai;Integrated Security=False;User Id=sa;Password=1qaz@2wsx!;MultipleActiveResultSets=True
       - ASPNETCORE_URLS=https://+:443;http://+:80
     ports:
       - "80"

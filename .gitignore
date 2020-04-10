@@ -13,3 +13,5 @@
 /Acai.API/bin/Debug/netcoreapp2.2
 /Acai.API/obj
 /obj/Docker
+/bin/Debug
+/obj/Debug

@@ -6,3 +6,6 @@ C:\Users\Dhielyton\source\repos\Acai\Acai.Infrastructure\obj\Debug\netcoreapp2.2
 C:\Users\Dhielyton\source\repos\Acai\Acai.Infrastructure\bin\Debug\netcoreapp2.2\Acai.Domain.dll
 C:\Users\Dhielyton\source\repos\Acai\Acai.Infrastructure\bin\Debug\netcoreapp2.2\Acai.Domain.pdb
 C:\Users\Dhielyton\source\repos\Acai\Acai.Infrastructure\obj\Debug\netcoreapp2.2\Acai.Infrastructure.csproj.CopyComplete
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Infrastructure\obj\Debug\netcoreapp2.2\Acai.Infrastructure.csprojAssemblyReference.cache
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Infrastructure\obj\Debug\netcoreapp2.2\Acai.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Dhielyton\source\repos\Acai\src\Acai.Infrastructure\obj\Debug\netcoreapp2.2\Acai.Infrastructure.AssemblyInfo.cs

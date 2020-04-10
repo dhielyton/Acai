@@ -10,7 +10,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Acai.Domain\Acai.Domain.csproj" />
+    <ProjectReference Include="..\Acai.Domain\Acai.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositorio\" />
   </ItemGroup>
 
 </Project>
