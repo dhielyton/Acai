@@ -10,3 +10,5 @@
 /.vs/Acai/v16/TestStore/0/testlog.manifest
 /.vs/Acai/v16/TestStore/0/000-0000.testlog
 /.vs/Acai/v16/.suo
+/Acai.API/bin/Debug/netcoreapp2.2
+/Acai.API/obj

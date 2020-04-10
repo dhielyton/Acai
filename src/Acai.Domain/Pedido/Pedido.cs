@@ -20,10 +20,10 @@ namespace Acai.Domain.Pedido
         public void AddItem(IProductComponente produto)
         {
             ItemPedidos = ItemPedidos ?? new List<ItemPedido>();
-            var item = new ItemPedido { Produto = produto };
+            var item = new ItemPedido(produto);
             ItemPedidos.Add(item);
-            MinutosPreparo += produto.GetMinutosPreparo();
-            ValorTotal += produto.GetPreco();
+            MinutosPreparo += item.MinutosPreparo;
+            ValorTotal += item.Valor;
 
         }
 

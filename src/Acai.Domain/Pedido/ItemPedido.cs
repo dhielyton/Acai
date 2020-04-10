@@ -8,6 +8,15 @@ namespace Acai.Domain.Pedido
 {
     public class ItemPedido:Entity
     {
+        public ItemPedido(IProductComponente produto)
+        {
+            Produto = produto;
+            Valor = produto.GetPreco();
+            MinutosPreparo = produto.GetMinutosPreparo();
+        }
+
         public IProductComponente Produto { get; set; }
+        public decimal Valor { get; set; }
+        public int MinutosPreparo { get; set; }
     }
 }
