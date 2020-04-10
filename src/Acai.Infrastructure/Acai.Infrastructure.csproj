@@ -13,8 +13,4 @@
     <ProjectReference Include="..\Acai.Domain\Acai.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositorio\" />
-  </ItemGroup>
-
 </Project>
