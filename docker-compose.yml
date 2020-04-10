@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  acai.api:
+    image: ${DOCKER_REGISTRY-}acaiapi
+    build:
+      context: .
+      dockerfile: Acai.API/Dockerfile
