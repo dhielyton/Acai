@@ -8,10 +8,10 @@ namespace Acai.Domain.SeedWork
     public interface IRepository<T> where T : Entity
     {
 
-        Task<T> Incluir(T entity);
-        Task<T> Editar(T entity);
-        Task Excluir(T Entity);
+        T Incluir(T entity);
+        T Editar(T entity);
+        void Excluir(T Entity);
         Task<T> ObterPorId(int id);
-        Task<ICollection<T>> ObterTodos();
+        
     }
 }

@@ -8,6 +8,6 @@ namespace Acai.Domain.Acompanhamento
 {
     public interface IAcompanhamentoRepository : IRepository<Acompanhamento>
     {
-        Task<ICollection<Acompanhamento>> ObterPorProduto(int idProduto);
+        
     }
 }
