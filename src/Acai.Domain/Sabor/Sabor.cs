@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Acai.Domain.Sabor
 {
-    public class Sabor : Entity, ITempoPreparo, IAdicionaisDecorator
+    public class Sabor : Entity, ITempoPreparo, Produto.IAdicionaisDecorator
     {
         public Sabor(IProductComponente produto, string descricao, int minutos = 0)
         {

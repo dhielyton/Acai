@@ -16,7 +16,7 @@ namespace Acai.Infrastructure
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Acompanhamento> Acompnhamentos { get; set; }
         public DbSet<Sabor> Sabores { get; set; }
-        public DbSet<Tamanho> Tamanhos { get; set; }
+        public DbSet<Domain.Tamanho.Tamanho> Tamanhos { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

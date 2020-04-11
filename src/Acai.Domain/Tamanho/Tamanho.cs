@@ -5,7 +5,7 @@ using System.Text;
 using Acai.Domain.Produto;
 namespace Acai.Domain.Tamanho
 {
-    public class Tamanho : Entity, IPreco, ITempoPreparo, IAdicionaisDecorator
+    public class Tamanho : Entity, IPreco, ITempoPreparo, Produto.IAdicionaisDecorator
     {
 
         public Tamanho(IProductComponente produto, string descricao, decimal preco, int minutosPreparo)

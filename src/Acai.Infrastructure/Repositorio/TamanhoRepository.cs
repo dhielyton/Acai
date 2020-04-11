@@ -12,11 +12,12 @@ namespace Acai.Infrastructure.Repositorio
     {
         public TamanhoRepository(DbSet<Tamanho> dbSet, DbContext context) : base(dbSet, context)
         {
+
         }
 
         public async Task<ICollection<Tamanho>> ObterPorProduto(int idProduto)
         {
-            return await _DbSet.Where(x => x.ProdutoId == idProduto).ToListAsync()
+            return await _DbSet.Where(x => x.ProdutoId == idProduto).ToListAsync();
         }
     }
 }

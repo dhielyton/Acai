@@ -16,6 +16,7 @@ namespace Acai.Domain.Pedido
         }
 
         public IProductComponente Produto { get; set; }
+        public Produto.IAdicionaisDecorator Tamanho { get; set; }
         public decimal Valor { get; set; }
         public int MinutosPreparo { get; set; }
     }
