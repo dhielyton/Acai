@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Acai.Domain.Acompanhamento;
+using Acai.Domain.Produto;
+using Acai.Domain.Sabor;
+using Acai.Domain.Tamanho;
+using Acai.Infrastructure.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +30,11 @@ namespace Acai.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+            services.AddTransient<IAcompanhamentoRepository, AcompanhamentoRepository>();
+            services.AddTransient<ITamanhoRepository, TamanhoRepository>();
+            services.AddTransient<ISaborRepository, SaborRepository>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
