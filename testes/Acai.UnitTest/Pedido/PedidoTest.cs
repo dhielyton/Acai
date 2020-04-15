@@ -26,8 +26,8 @@ namespace Acai.UnitTest.Pedido
             pedido.ItemPedidos.Count.Should().Be(1);
             var item = pedido.ItemPedidos.FirstOrDefault();
             item.Should().NotBeNull();
-            pedido.ValorTotal.Should().Be(item.Produto.GetPreco());
-            pedido.MinutosPreparo.Should().Be(item.Produto.GetMinutosPreparo());
+            pedido.ValorTotal.Should().Be(item.ProdutoComponente.GetPreco());
+            pedido.MinutosPreparo.Should().Be(item.ProdutoComponente.GetMinutosPreparo());
         }
 
         [Fact]
@@ -47,8 +47,8 @@ namespace Acai.UnitTest.Pedido
             pedido.Processar();
             pedido.Should().NotBeNull();
             pedido.ItemPedidos.Count.Should().Be(4);
-            pedido.ValorTotal.Should().Be(pedido.ItemPedidos.Sum(x => x.Produto.GetPreco()));
-            pedido.MinutosPreparo.Should().Be(pedido.ItemPedidos.Sum(x => x.Produto.GetMinutosPreparo()));
+            pedido.ValorTotal.Should().Be(pedido.ItemPedidos.Sum(x => x.ProdutoComponente.GetPreco()));
+            pedido.MinutosPreparo.Should().Be(pedido.ItemPedidos.Sum(x => x.ProdutoComponente.GetMinutosPreparo()));
 
         }
 

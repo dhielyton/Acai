@@ -6,6 +6,6 @@ namespace Acai.Domain.Produto
 {
     public interface IAdicionaisDecorator: IProductComponente
     {
-
+         IProductComponente Produto { get; set; }
     }
 }

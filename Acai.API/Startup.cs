@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Acai.Domain.Acompanhamento;
 using Acai.Domain.Produto;
 using Acai.Domain.Sabor;
 using Acai.Domain.Tamanho;
+using Acai.Infrastructure;
 using Acai.Infrastructure.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -30,11 +33,23 @@ namespace Acai.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddTransient<IProdutoRepository, ProdutoRepository>();
             services.AddTransient<IAcompanhamentoRepository, AcompanhamentoRepository>();
             services.AddTransient<ITamanhoRepository, TamanhoRepository>();
             services.AddTransient<ISaborRepository, SaborRepository>();
-
+            services.AddEntityFrameworkSqlServer()
+                     .AddDbContext<AcaiContext>(options =>
+                     {
+                         options.UseSqlServer(Configuration["ConnectionString"],
+                                              sqlOptions => sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().
+                                                                                                   Assembly.GetName().Name));
+                     },
+                     ServiceLifetime.Scoped // Note that Scoped is the default choice
+                                            // in AddDbContext. It is shown here only for
+                                            // pedagogic purposes.
+                     );
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

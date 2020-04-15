@@ -10,14 +10,25 @@ namespace Acai.Domain.Pedido
     {
         public ItemPedido(IProductComponente produto)
         {
-            Produto = produto;
+            ProdutoComponente = produto;
             Valor = produto.GetPreco();
             MinutosPreparo = produto.GetMinutosPreparo();
         }
 
-        public IProductComponente Produto { get; set; }
-        public Produto.IAdicionaisDecorator Tamanho { get; set; }
+        public IProductComponente ProdutoComponente { get; set; }
+        public Produto.Produto Produto { get; set; }
+        public int ProdutoId { get; set; }
+        public Tamanho.Tamanho Tamanho { get; set; }
+        public int TamanhoId { get; set; }
+        public Sabor.Sabor Sabor { get; set; }
+        public int SaborId { get; set; }
+
         public decimal Valor { get; set; }
         public int MinutosPreparo { get; set; }
+
+        public void Processar()
+        {
+            
+        }
     }
 }
