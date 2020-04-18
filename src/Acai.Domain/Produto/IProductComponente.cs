@@ -7,7 +7,7 @@ namespace Acai.Domain.Produto
 {
     public interface IProductComponente: IEntity
     {
-        Produto
+        
         string GetDescricao();
         decimal GetPreco();
         int GetMinutosPreparo();

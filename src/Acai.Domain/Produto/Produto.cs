@@ -38,6 +38,6 @@ namespace Acai.Domain.Produto
             return 0.00M;
         }
 
-       
+        
     }
 }

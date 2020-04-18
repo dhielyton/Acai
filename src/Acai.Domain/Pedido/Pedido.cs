@@ -30,6 +30,10 @@ namespace Acai.Domain.Pedido
         public void Processar()
         {
             Data = DateTime.Now;
+            foreach(var item in ItemPedidos)
+            {
+                item.Processar();
+            }
         }
 
       

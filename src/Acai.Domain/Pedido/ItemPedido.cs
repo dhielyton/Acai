@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Acai.Domain.Pedido
 {
-    public class ItemPedido:Entity
+    public class ItemPedido : Entity
     {
         public ItemPedido(IProductComponente produto)
         {
@@ -28,7 +28,28 @@ namespace Acai.Domain.Pedido
 
         public void Processar()
         {
-            
+            Detalhar(ProdutoComponente);
         }
+        public IProductComponente Detalhar(IProductComponente produtoComponent)
+        {
+            IAdicionaisDecorator adiconias = produtoComponent as IAdicionaisDecorator;
+            if (adiconias == null)
+            {
+                Produto = (produtoComponent as Produto.Produto);
+                return produtoComponent;
+            }
+
+            var tamanho = (produtoComponent as Tamanho.Tamanho);
+            if (tamanho != null)
+                Tamanho = tamanho;
+
+            var sabor = (produtoComponent as Sabor.Sabor);
+            if (sabor != null)
+                Sabor = sabor;
+
+            return Detalhar(adiconias.Produto) as Produto.Produto;
+
+        }
+
     }
 }
